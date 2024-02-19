@@ -1,0 +1,15 @@
+{
+  "AminoConfigurations": [
+    {
+      "vendorName": "Hiroyuki Akasaki",
+      "libraryVersion": "1.0.0",
+      "libraryName": "AkPBD",
+      "jsonLibs": [
+        {
+          "path": "compounds",
+          "files": [ ]
+        }
+      ]
+    }
+  ]
+}
