@@ -8,6 +8,10 @@
         {
           "path": "compounds",
           "files": [ ]
+        },
+        {
+          "path": "graphs",
+          "files": [ ]
         }
       ]
     }
