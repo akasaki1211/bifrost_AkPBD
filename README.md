@@ -6,9 +6,10 @@ Compounds for Position Based Dynamics in bifrost
 > * Bifrost 2.7.1.1
 
 # Installation
-Do one of the following
-* Set path to [`bifrost_lib_config.json`](bifrost_lib_config.json) to `BIFROST_LIB_CONFIG_FILES` environment variable.
-* Copy json files in [`compounds`](compounds) to `C:\Users\<USERNAME>\Autodesk\Bifrost\Compounds`
+Set the path to [`bifrost_lib_config.json`](bifrost_lib_config.json) as `BIFROST_LIB_CONFIG_FILES` in the environment variable. For example, to place the bifrost_AkPBD folder on the D drive, enter the following in Maya.env:
+```
+BIFROST_LIB_CONFIG_FILES=D:\bifrost_AkPBD\bifrost_lib_config.json
+```
 
 # Sample Graphs
 Some samples can be accessed from the Bifrost Browser.  
