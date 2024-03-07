@@ -21,3 +21,7 @@ Some samples can be accessed from the Bifrost Browser.
 * [Bifrostではじめる位置ベース物理シミュ 第3回 \~制約条件を追加する\~](https://qiita.com/akasaki1211/items/9d22075df1a51be1ed4c)
 * [Bifrostではじめる位置ベース物理シミュ 第4回 \~コリジョンを追加する\~](https://qiita.com/akasaki1211/items/971ccad3c50d88749ba1)
 * [Bifrostではじめる位置ベース物理シミュ 第5回 \~ジョイント、カーブ、メッシュ\~](https://qiita.com/akasaki1211/items/39440c98e54999673ecf)
+
+# Related Posts
+* [Mesh Collision](https://x.com/akasaki1211/status/1758894802505249012?s=46&t=3hUc70jt72Ws5nGlWWELlw)
+* [Mesh Collision with Bulge](https://x.com/akasaki1211/status/1762799556708729248?s=46&t=3hUc70jt72Ws5nGlWWELlw)
