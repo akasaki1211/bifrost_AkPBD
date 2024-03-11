@@ -11,6 +11,26 @@ Set the path to [`bifrost_lib_config.json`](bifrost_lib_config.json) as `BIFROST
 BIFROST_LIB_CONFIG_FILES=D:\bifrost_AkPBD\bifrost_lib_config.json
 ```
 
+# Compounds
+|Category|Name|Description|
+|----|---|---|
+|Core|**verlet**|Calculate next position (include gravity and spring)|
+|Core|**keep_position**|Return to initial position|
+|Core|**update_velocity**|Calculate velocity from change of position|
+|Core|**reset**|Reset parameters|
+|Constraint|**distance_constraint**|Distance constraint (one point fixed)|
+|Constraint|**distance_constraint_2_points**|Distance constraints (2 points can move)|
+|Constraint|**angle_limit**|Angle limit between two vectors|
+|Collision|**ground_collision**|Horizontal infinite XZ plane collision|
+|Collision|**sphere_collision**|Sphere collision|
+|Collision|**capsule_collision**|capsule collision (individual radius)|
+|Collision|**infinite_plane_collision**|infinite plane collision|
+|Collision|**mesh_collision**|Mesh collision<br>(*only available in geometry)|
+|Collision|**mesh_collision_with_bulge**|Mesh collision with bulge effects<br>(*only available in geometry)|
+|Utils|**distance**|Distance between two vectors|
+|Utils|**mass_to_weight**|Calculate weight from mass (w=1/m)|
+|Utils|**normalize_weight**|Normalize weights (total to 1)|
+
 # Sample Graphs
 Some samples can be accessed from the Bifrost Browser.  
 ![samples.png](.images/samples.png)
@@ -25,3 +45,4 @@ Some samples can be accessed from the Bifrost Browser.
 # Related Posts
 * [Mesh Collision with Bulge](https://x.com/akasaki1211/status/1758894802505249012?s=46&t=3hUc70jt72Ws5nGlWWELlw)
 * [Mesh Collision with Bulge and Dynamics](https://x.com/akasaki1211/status/1762799556708729248?s=46&t=3hUc70jt72Ws5nGlWWELlw)
+* [Angle Limit](https://twitter.com/akasaki1211/status/1767139185029509301)
