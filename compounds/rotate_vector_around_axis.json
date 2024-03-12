@@ -11,7 +11,7 @@
     "types": [],
     "compounds": [
         {
-            "name": "AkPBD::Constraint::angle_limit",
+            "name": "AkPBD::Utils::rotate_vector_around_axis",
             "uriImported": "stream:/bifrostGraphShape1",
             "metadata": [
                 {
@@ -29,31 +29,28 @@
                                             "metaValue": "2"
                                         },
                                         {
-                                            "metaName": "LayoutPos",
-                                            "metaType": "string",
-                                            "metaValue": "-1222.33 625.179"
-                                        },
-                                        {
                                             "metaName": "io_ports",
                                             "metadata": [
                                                 {
-                                                    "metaName": "position"
+                                                    "metaName": "vector"
                                                 },
                                                 {
-                                                    "metaName": "initial_position"
+                                                    "metaName": "axis"
                                                 },
                                                 {
-                                                    "metaName": "parent_position"
-                                                },
-                                                {
-                                                    "metaName": "limit_angle_degrees"
+                                                    "metaName": "angle_radians"
                                                 }
                                             ]
                                         },
                                         {
                                             "metaName": "zValue",
                                             "metaType": "string",
-                                            "metaValue": "41.000000"
+                                            "metaValue": "52.000000"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "190.383 1115.67"
                                         }
                                     ]
                                 }
@@ -71,22 +68,22 @@
                                             "metaValue": "2"
                                         },
                                         {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "55.000000"
+                                        },
+                                        {
                                             "metaName": "LayoutPos",
                                             "metaType": "string",
-                                            "metaValue": "1283.08 515.734"
+                                            "metaValue": "1908.37 821.63"
                                         },
                                         {
                                             "metaName": "io_ports",
                                             "metadata": [
                                                 {
-                                                    "metaName": "updated_position"
+                                                    "metaName": "output_vector"
                                                 }
                                             ]
-                                        },
-                                        {
-                                            "metaName": "zValue",
-                                            "metaType": "string",
-                                            "metaValue": "39.000000"
                                         }
                                     ]
                                 }
@@ -95,34 +92,9 @@
                     ]
                 },
                 {
-                    "metaName": "_recentNode_",
-                    "metaType": "string",
-                    "metaValue": "BifrostGraph,AkPBD::Utils,rotate_vector_around_axis"
-                },
-                {
-                    "metaName": "_recentNode_",
-                    "metaType": "string",
-                    "metaValue": "BifrostGraph,Core::Graph,pass"
-                },
-                {
-                    "metaName": "_recentNode_",
-                    "metaType": "string",
-                    "metaValue": "BifrostGraph,Core::Math,add"
-                },
-                {
-                    "metaName": "_recentNode_",
-                    "metaType": "string",
-                    "metaValue": "BifrostGraph,Core::Math,multiply"
-                },
-                {
-                    "metaName": "_recentNode_",
-                    "metaType": "string",
-                    "metaValue": "BifrostGraph,Core::Math,sin"
-                },
-                {
                     "metaName": "ViewportRect",
                     "metaType": "string",
-                    "metaValue": "-1190.74 80.7289 2739.48 1519.06"
+                    "metaValue": "94.4137 609.963 2215.5 1228.51"
                 },
                 {
                     "metaName": "DisplayMode",
@@ -132,21 +104,22 @@
                 {
                     "metaName": "LayoutPos",
                     "metaType": "string",
-                    "metaValue": "-415.133 -93.773"
+                    "metaValue": "444.212 836.977"
                 },
                 {
                     "metaName": "zValue",
                     "metaType": "string",
-                    "metaValue": "39.000000"
+                    "metaValue": "35.000000"
                 }
             ],
             "ports": [
                 {
-                    "portName": "updated_position",
-                    "portDirection": "output"
+                    "portName": "output_vector",
+                    "portDirection": "output",
+                    "portType": "Math::float3"
                 },
                 {
-                    "portName": "position",
+                    "portName": "vector",
                     "portDirection": "input",
                     "portType": "Math::float3",
                     "portDefault": {
@@ -156,7 +129,7 @@
                     }
                 },
                 {
-                    "portName": "initial_position",
+                    "portName": "axis",
                     "portDirection": "input",
                     "portType": "Math::float3",
                     "portDefault": {
@@ -166,17 +139,7 @@
                     }
                 },
                 {
-                    "portName": "parent_position",
-                    "portDirection": "input",
-                    "portType": "Math::float3",
-                    "portDefault": {
-                        "x": "0f",
-                        "y": "0f",
-                        "z": "0f"
-                    }
-                },
-                {
-                    "portName": "limit_angle_degrees",
+                    "portName": "angle_radians",
                     "portDirection": "input",
                     "portType": "float",
                     "portDefault": "0f"
@@ -184,11 +147,12 @@
             ],
             "compoundNodes": [
                 {
-                    "nodeName": "add1",
+                    "nodeName": "add",
                     "nodeType": "Core::Math::add",
                     "multiInPortNames": [
-                        "parent_position",
-                        "output_vector"
+                        "parallel_vector",
+                        "output1",
+                        "output2"
                     ],
                     "metadata": [
                         {
@@ -197,20 +161,20 @@
                             "metaValue": "2"
                         },
                         {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "726.907 664.745"
-                        },
-                        {
                             "metaName": "zValue",
                             "metaType": "string",
-                            "metaValue": "37.000000"
+                            "metaValue": "54.000000"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1650.75 821.818"
                         }
                     ]
                 },
                 {
-                    "nodeName": "degrees_to_radians",
-                    "nodeType": "Core::Conversion::degrees_to_radians",
+                    "nodeName": "cos",
+                    "nodeType": "Core::Math::cos",
                     "metadata": [
                         {
                             "metaName": "DisplayMode",
@@ -220,166 +184,7 @@
                         {
                             "metaName": "LayoutPos",
                             "metaType": "string",
-                            "metaValue": "-234.254 756.4"
-                        },
-                        {
-                            "metaName": "zValue",
-                            "metaType": "string",
-                            "metaValue": "40.000000"
-                        }
-                    ]
-                },
-                {
-                    "nodeName": "greater",
-                    "nodeType": "Core::Logic::greater",
-                    "metadata": [
-                        {
-                            "metaName": "DisplayMode",
-                            "metaType": "string",
-                            "metaValue": "2"
-                        },
-                        {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "313.568 449.266"
-                        },
-                        {
-                            "metaName": "zValue",
-                            "metaType": "string",
-                            "metaValue": "42.000000"
-                        }
-                    ]
-                },
-                {
-                    "nodeName": "if",
-                    "nodeType": "Core::Logic::if",
-                    "metadata": [
-                        {
-                            "metaName": "DisplayMode",
-                            "metaType": "string",
-                            "metaValue": "2"
-                        },
-                        {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "1020.53 518.674"
-                        },
-                        {
-                            "metaName": "zValue",
-                            "metaType": "string",
-                            "metaValue": "38.000000"
-                        }
-                    ]
-                },
-                {
-                    "nodeName": "quaternion_to_axis_angle",
-                    "nodeType": "Core::Math::quaternion_to_axis_angle",
-                    "metadata": [
-                        {
-                            "metaName": "DisplayMode",
-                            "metaType": "string",
-                            "metaValue": "2"
-                        },
-                        {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "-240.946 1096.29"
-                        },
-                        {
-                            "metaName": "zValue",
-                            "metaType": "string",
-                            "metaValue": "31.000000"
-                        }
-                    ]
-                },
-                {
-                    "nodeName": "rotation_between_vectors",
-                    "nodeType": "Core::Math::rotation_between_vectors",
-                    "metadata": [
-                        {
-                            "metaName": "DisplayMode",
-                            "metaType": "string",
-                            "metaValue": "2"
-                        },
-                        {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "-514.434 1103.11"
-                        },
-                        {
-                            "metaName": "zValue",
-                            "metaType": "string",
-                            "metaValue": "32.000000"
-                        }
-                    ]
-                },
-                {
-                    "nodeName": "subtract",
-                    "nodeType": "Core::Math::subtract",
-                    "multiInPortNames": [
-                        "position",
-                        "parent_position"
-                    ],
-                    "metadata": [
-                        {
-                            "metaName": "DisplayMode",
-                            "metaType": "string",
-                            "metaValue": "2"
-                        },
-                        {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "-810.383 875.828"
-                        },
-                        {
-                            "metaName": "zValue",
-                            "metaType": "string",
-                            "metaValue": "34.000000"
-                        }
-                    ]
-                },
-                {
-                    "nodeName": "subtract1",
-                    "nodeType": "Core::Math::subtract",
-                    "multiInPortNames": [
-                        "initial_position",
-                        "parent_position"
-                    ],
-                    "metadata": [
-                        {
-                            "metaName": "DisplayMode",
-                            "metaType": "string",
-                            "metaValue": "2"
-                        },
-                        {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "-809.626 1089.97"
-                        },
-                        {
-                            "metaName": "zValue",
-                            "metaType": "string",
-                            "metaValue": "33.000000"
-                        }
-                    ]
-                },
-                {
-                    "nodeName": "subtract2",
-                    "nodeType": "Core::Math::subtract",
-                    "multiInPortNames": [
-                        "radians",
-                        "radians1"
-                    ],
-                    "metadata": [
-                        {
-                            "metaName": "DisplayMode",
-                            "metaType": "string",
-                            "metaValue": "2"
-                        },
-                        {
-                            "metaName": "LayoutPos",
-                            "metaType": "string",
-                            "metaValue": "203.67 1076.26"
+                            "metaValue": "1096.78 1076.29"
                         },
                         {
                             "metaName": "zValue",
@@ -389,8 +194,79 @@
                     ]
                 },
                 {
-                    "nodeName": "rotate_vector_around_axis",
-                    "nodeType": "AkPBD::Utils::rotate_vector_around_axis",
+                    "nodeName": "cross",
+                    "nodeType": "Core::Math::cross",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1100.09 1257.2"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "38.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "orthogonal_vector",
+                        "cosine"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1374.55 937.672"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "41.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply1",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "orthogonal_vector",
+                        "cosine"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1374.67 1319.45"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "40.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "normalize",
+                    "nodeType": "Core::Math::normalize",
                     "metadata": [
                         {
                             "metaName": "DisplayMode",
@@ -400,100 +276,118 @@
                         {
                             "metaName": "zValue",
                             "metaType": "string",
-                            "metaValue": "46.000000"
+                            "metaValue": "53.000000"
                         },
                         {
                             "metaName": "LayoutPos",
                             "metaType": "string",
-                            "metaValue": "447.5 855"
+                            "metaValue": "582.479 1083.21"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "project_vector",
+                    "nodeType": "Core::Math::project_vector",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "826.105 841.198"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "37.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "sin",
+                    "nodeType": "Core::Math::sin",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1087.2 1449.63"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "39.000000"
                         }
                     ]
                 }
             ],
             "connections": [
                 {
-                    "source": "degrees_to_radians.radians",
-                    "target": "greater.second"
+                    "source": "project_vector.parallel_vector",
+                    "target": "add.first.parallel_vector"
                 },
                 {
-                    "source": "quaternion_to_axis_angle.radians",
-                    "target": "greater.first"
+                    "source": "multiply.output",
+                    "target": "add.first.output1"
                 },
                 {
-                    "source": "greater.output",
-                    "target": "if.condition"
+                    "source": "multiply1.output",
+                    "target": "add.first.output2"
                 },
                 {
-                    "source": "rotation_between_vectors.quaternion",
-                    "target": "quaternion_to_axis_angle.quaternion"
+                    "source": "cos.cosine",
+                    "target": "multiply.first.cosine"
                 },
                 {
-                    "source": "subtract1.output",
-                    "target": "rotation_between_vectors.from"
+                    "source": "normalize.normalized",
+                    "target": "cross.first"
                 },
                 {
-                    "source": "subtract.output",
-                    "target": "rotation_between_vectors.to"
+                    "source": "project_vector.orthogonal_vector",
+                    "target": "cross.second"
                 },
                 {
-                    "source": "degrees_to_radians.radians",
-                    "target": "subtract2.first.radians"
+                    "source": "cross.cross_product",
+                    "target": "multiply1.first.orthogonal_vector"
                 },
                 {
-                    "source": "quaternion_to_axis_angle.radians",
-                    "target": "subtract2.first.radians1"
+                    "source": "project_vector.orthogonal_vector",
+                    "target": "multiply.first.orthogonal_vector"
                 },
                 {
-                    "source": "add1.output",
-                    "target": "if.true_case"
+                    "source": "sin.sine",
+                    "target": "multiply1.first.cosine"
                 },
                 {
-                    "source": "if.output",
-                    "target": ".updated_position"
+                    "source": "normalize.normalized",
+                    "target": "project_vector.onto_vector"
                 },
                 {
-                    "source": ".position",
-                    "target": "subtract.first.position"
+                    "source": ".vector",
+                    "target": "project_vector.vector"
                 },
                 {
-                    "source": ".position",
-                    "target": "if.false_case"
+                    "source": ".axis",
+                    "target": "normalize.value"
                 },
                 {
-                    "source": ".initial_position",
-                    "target": "subtract1.first.initial_position"
+                    "source": ".angle_radians",
+                    "target": "cos.value"
                 },
                 {
-                    "source": ".parent_position",
-                    "target": "add1.first.parent_position"
+                    "source": ".angle_radians",
+                    "target": "sin.value"
                 },
                 {
-                    "source": ".parent_position",
-                    "target": "subtract.first.parent_position"
-                },
-                {
-                    "source": ".parent_position",
-                    "target": "subtract1.first.parent_position"
-                },
-                {
-                    "source": ".limit_angle_degrees",
-                    "target": "degrees_to_radians.degrees"
-                },
-                {
-                    "source": "subtract.output",
-                    "target": "rotate_vector_around_axis.vector"
-                },
-                {
-                    "source": "quaternion_to_axis_angle.axis",
-                    "target": "rotate_vector_around_axis.axis"
-                },
-                {
-                    "source": "subtract2.output",
-                    "target": "rotate_vector_around_axis.angle_radians"
-                },
-                {
-                    "source": "rotate_vector_around_axis.output_vector",
-                    "target": "add1.first.output_vector"
+                    "source": "add.output",
+                    "target": ".output_vector"
                 }
             ],
             "values": [],
