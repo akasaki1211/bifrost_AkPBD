@@ -48,3 +48,4 @@ Some samples can be accessed from the Bifrost Browser.
 * [Mesh Collision with Bulge](https://x.com/akasaki1211/status/1758894802505249012?s=46&t=3hUc70jt72Ws5nGlWWELlw)
 * [Mesh Collision with Bulge and Dynamics](https://x.com/akasaki1211/status/1762799556708729248?s=46&t=3hUc70jt72Ws5nGlWWELlw)
 * [Angle Limit](https://twitter.com/akasaki1211/status/1767139185029509301)
+* [Hinge Joint](https://twitter.com/akasaki1211/status/1767531425815990379)
