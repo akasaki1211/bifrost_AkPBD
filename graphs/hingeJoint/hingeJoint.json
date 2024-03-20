@@ -1,0 +1,1085 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "AkPBD::Graphs::hingeJoint",
+            "uriImported": "stream:/hingeJointShape",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-892.94 -70.7649"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "initial_position"
+                                                },
+                                                {
+                                                    "metaName": "initial_velocity"
+                                                },
+                                                {
+                                                    "metaName": "start_frame"
+                                                },
+                                                {
+                                                    "metaName": "damping"
+                                                },
+                                                {
+                                                    "metaName": "elasticity"
+                                                },
+                                                {
+                                                    "metaName": "mass"
+                                                },
+                                                {
+                                                    "metaName": "stiffness"
+                                                },
+                                                {
+                                                    "metaName": "use_gravity"
+                                                },
+                                                {
+                                                    "metaName": "parent_position"
+                                                },
+                                                {
+                                                    "metaName": "plane_matrix"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "31.000000"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-59.7487 -184.412"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output_position"
+                                                },
+                                                {
+                                                    "metaName": "output_velocity"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "33.000000"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,AkPBD::Utils,distance"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-954 -529 1908 1058"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Hiroyuki Akasaki"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "AkPBD"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "It is a type of bone dynamics. It is achieved by projecting the corrected position and external force vector onto a certain plane."
+                },
+                {
+                    "metaName": "example_scene",
+                    "metaType": "string",
+                    "metaValue": "hingeJoint_example.ma"
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "hingeJoint_thumb.png"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "initial_position",
+                    "portDirection": "input",
+                    "portType": "Math::float3",
+                    "portDefault": {
+                        "x": "7.34353352f",
+                        "y": "15.128026f",
+                        "z": "5.57013607f"
+                    }
+                },
+                {
+                    "portName": "initial_velocity",
+                    "portDirection": "input",
+                    "portType": "Math::float3",
+                    "portDefault": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "portName": "start_frame",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "damping",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.0500000007f"
+                },
+                {
+                    "portName": "elasticity",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "5f"
+                },
+                {
+                    "portName": "mass",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "stiffness",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "use_gravity",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "output_position",
+                    "portDirection": "output",
+                    "portType": "Math::float3"
+                },
+                {
+                    "portName": "output_velocity",
+                    "portDirection": "output",
+                    "portType": "Math::float3"
+                },
+                {
+                    "portName": "parent_position",
+                    "portDirection": "input",
+                    "portType": "Math::float3",
+                    "portDefault": {
+                        "x": "0f",
+                        "y": "11.2490959f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "portName": "plane_matrix",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "0.734353364f",
+                            "y": "0.387893051f",
+                            "z": "0.557013571f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "-0.668791413f",
+                            "y": "0.553667307f",
+                            "z": "0.496155798f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "-0.115944818f",
+                            "y": "-0.736879587f",
+                            "z": "0.666006982f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "0f",
+                            "y": "11.2490959f",
+                            "z": "0f",
+                            "w": "1f"
+                        }
+                    }
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "pbd",
+                    "uriImported": "stream:/hingeJointShape",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-1136.94 -174.83"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "position"
+                                                        },
+                                                        {
+                                                            "metaName": "velocity"
+                                                        },
+                                                        {
+                                                            "metaName": "initial_position"
+                                                        },
+                                                        {
+                                                            "metaName": "initial_velocity"
+                                                        },
+                                                        {
+                                                            "metaName": "start_frame"
+                                                        },
+                                                        {
+                                                            "metaName": "damping"
+                                                        },
+                                                        {
+                                                            "metaName": "elasticity"
+                                                        },
+                                                        {
+                                                            "metaName": "mass"
+                                                        },
+                                                        {
+                                                            "metaName": "stiffness"
+                                                        },
+                                                        {
+                                                            "metaName": "use_gravity"
+                                                        },
+                                                        {
+                                                            "metaName": "parent_position"
+                                                        },
+                                                        {
+                                                            "metaName": "length"
+                                                        },
+                                                        {
+                                                            "metaName": "plane_matrix"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "zValue",
+                                                    "metaType": "string",
+                                                    "metaValue": "32.000000"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "1057.53 123.766"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "output_position"
+                                                        },
+                                                        {
+                                                            "metaName": "output_velocity"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "zValue",
+                                                    "metaType": "string",
+                                                    "metaValue": "37.000000"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "backdrop",
+                            "metadata": [
+                                {
+                                    "metaName": "type",
+                                    "metaType": "string",
+                                    "metaValue": "backdrop"
+                                },
+                                {
+                                    "metaName": "title",
+                                    "metaType": "string",
+                                    "metaValue": "Project Force Vector onto Plane"
+                                },
+                                {
+                                    "metaName": "color",
+                                    "metaType": "string",
+                                    "metaValue": "#28c85252"
+                                },
+                                {
+                                    "metaName": "coords",
+                                    "metaType": "string",
+                                    "metaValue": "-1159.39 -642.178 501.11 337"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "backdrop1",
+                            "metadata": [
+                                {
+                                    "metaName": "type",
+                                    "metaType": "string",
+                                    "metaValue": "backdrop"
+                                },
+                                {
+                                    "metaName": "title",
+                                    "metaType": "string",
+                                    "metaValue": "Project Point onto Plane"
+                                },
+                                {
+                                    "metaName": "color",
+                                    "metaType": "string",
+                                    "metaValue": "#28c85252"
+                                },
+                                {
+                                    "metaName": "coords",
+                                    "metaType": "string",
+                                    "metaValue": "-11.8812 -380.54 305.009 375.861"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,AkPBD::Core,verlet"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,AkPBD::Utils,project_onto_plane"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Constants,float"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Conversion,vector4_to_vector3"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Conversion,vector3_to_vector4"
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-1043.85 -995.325 2428.18 1615.75"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "position",
+                            "portDirection": "input",
+                            "portType": "Math::float3",
+                            "linkedFeedbackPort": "output_position"
+                        },
+                        {
+                            "portName": "velocity",
+                            "portDirection": "input",
+                            "portType": "Math::float3",
+                            "linkedFeedbackPort": "output_velocity"
+                        },
+                        {
+                            "portName": "initial_position",
+                            "portDirection": "input",
+                            "portType": "Math::float3"
+                        },
+                        {
+                            "portName": "initial_velocity",
+                            "portDirection": "input",
+                            "portType": "Math::float3"
+                        },
+                        {
+                            "portName": "start_frame",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "damping",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "elasticity",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "mass",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "stiffness",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "use_gravity",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "output_position",
+                            "portDirection": "output"
+                        },
+                        {
+                            "portName": "output_velocity",
+                            "portDirection": "output"
+                        },
+                        {
+                            "portName": "parent_position",
+                            "portDirection": "input",
+                            "portType": "Math::float3"
+                        },
+                        {
+                            "portName": "length",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "plane_matrix",
+                            "portDirection": "input",
+                            "portType": "Math::float4x4"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "keep_position",
+                            "nodeType": "AkPBD::Core::keep_position",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-266.487 -356.805"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "33.000000"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "update_velocity",
+                            "nodeType": "AkPBD::Core::update_velocity",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "526.363 75.8024"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "35.000000"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "reset",
+                            "nodeType": "AkPBD::Core::reset",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "812.931 124.017"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "36.000000"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "distance_constraint",
+                            "nodeType": "AkPBD::Constraint::distance_constraint",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "288.508 -61.5849"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "34.000000"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "value",
+                            "valueType": "Math::float3",
+                            "metadata": [
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-1149.39 -490.412"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "31.000000"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "project_onto_plane",
+                            "nodeType": "AkPBD::Utils::project_onto_plane",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "30.5 -247"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "38.000000"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "project_onto_plane1",
+                            "nodeType": "AkPBD::Utils::project_onto_plane",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-897.5 -559"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "39.000000"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "verlet",
+                            "nodeType": "AkPBD::Core::verlet",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "zValue",
+                                    "metaType": "string",
+                                    "metaValue": "54.000000"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-526.5 -619"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": ".initial_velocity",
+                            "target": "reset.reset_velocity"
+                        },
+                        {
+                            "source": ".stiffness",
+                            "target": "keep_position.stiffness"
+                        },
+                        {
+                            "source": ".position",
+                            "target": "keep_position.prev_position"
+                        },
+                        {
+                            "source": ".position",
+                            "target": "update_velocity.prev_position"
+                        },
+                        {
+                            "source": "update_velocity.velocity",
+                            "target": "reset.velocity"
+                        },
+                        {
+                            "source": ".initial_position",
+                            "target": "reset.reset_position"
+                        },
+                        {
+                            "source": "reset.output_position",
+                            "target": ".output_position"
+                        },
+                        {
+                            "source": "reset.output_velocity",
+                            "target": ".output_velocity"
+                        },
+                        {
+                            "source": ".parent_position",
+                            "target": "distance_constraint.parent_position"
+                        },
+                        {
+                            "source": ".length",
+                            "target": "distance_constraint.length"
+                        },
+                        {
+                            "source": "distance_constraint.updated_position",
+                            "target": "update_velocity.position"
+                        },
+                        {
+                            "source": "distance_constraint.updated_position",
+                            "target": "reset.position"
+                        },
+                        {
+                            "source": ".start_frame",
+                            "target": "reset.start_frame"
+                        },
+                        {
+                            "source": "keep_position.updated_position",
+                            "target": "project_onto_plane.input"
+                        },
+                        {
+                            "source": ".plane_matrix",
+                            "target": "project_onto_plane.plane_matrix"
+                        },
+                        {
+                            "source": "project_onto_plane.projected_point",
+                            "target": "distance_constraint.position"
+                        },
+                        {
+                            "source": ".plane_matrix",
+                            "target": "project_onto_plane1.plane_matrix"
+                        },
+                        {
+                            "source": "value.output",
+                            "target": "project_onto_plane1.input"
+                        },
+                        {
+                            "source": ".position",
+                            "target": "verlet.position"
+                        },
+                        {
+                            "source": ".velocity",
+                            "target": "verlet.velocity"
+                        },
+                        {
+                            "source": ".initial_position",
+                            "target": "verlet.initial_position"
+                        },
+                        {
+                            "source": ".damping",
+                            "target": "verlet.damping"
+                        },
+                        {
+                            "source": ".elasticity",
+                            "target": "verlet.elasticity"
+                        },
+                        {
+                            "source": ".mass",
+                            "target": "verlet.mass"
+                        },
+                        {
+                            "source": ".use_gravity",
+                            "target": "verlet.use_gravity"
+                        },
+                        {
+                            "source": "project_onto_plane1.projected_vector",
+                            "target": "verlet.gravity"
+                        },
+                        {
+                            "source": "verlet.updated_position",
+                            "target": "keep_position.position"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "reset.position",
+                            "valueType": "Math::float3",
+                            "value": {
+                                "x": "0f",
+                                "y": "0f",
+                                "z": "0f"
+                            }
+                        },
+                        {
+                            "valueName": "reset.velocity",
+                            "valueType": "Math::float3",
+                            "value": {
+                                "x": "0f",
+                                "y": "0f",
+                                "z": "0f"
+                            }
+                        },
+                        {
+                            "valueName": "value.value",
+                            "valueType": "Math::float3",
+                            "value": {
+                                "x": "0f",
+                                "y": "-980f",
+                                "z": "0f"
+                            }
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "pbd",
+                    "nodeType": "pbd",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-311.334 -184.761"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "34.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "distance",
+                    "nodeType": "AkPBD::Utils::distance",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-595.421 244.31"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "32.000000"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": ".initial_position",
+                    "target": "pbd.initial_position"
+                },
+                {
+                    "source": ".initial_velocity",
+                    "target": "pbd.initial_velocity"
+                },
+                {
+                    "source": ".initial_position",
+                    "target": "pbd.position"
+                },
+                {
+                    "source": ".initial_velocity",
+                    "target": "pbd.velocity"
+                },
+                {
+                    "source": ".damping",
+                    "target": "pbd.damping"
+                },
+                {
+                    "source": ".elasticity",
+                    "target": "pbd.elasticity"
+                },
+                {
+                    "source": ".mass",
+                    "target": "pbd.mass"
+                },
+                {
+                    "source": ".stiffness",
+                    "target": "pbd.stiffness"
+                },
+                {
+                    "source": ".use_gravity",
+                    "target": "pbd.use_gravity"
+                },
+                {
+                    "source": "pbd.output_position",
+                    "target": ".output_position"
+                },
+                {
+                    "source": "pbd.output_velocity",
+                    "target": ".output_velocity"
+                },
+                {
+                    "source": ".parent_position",
+                    "target": "pbd.parent_position"
+                },
+                {
+                    "source": ".initial_position",
+                    "target": "distance.vector_1"
+                },
+                {
+                    "source": ".parent_position",
+                    "target": "distance.vector_2"
+                },
+                {
+                    "source": "distance.distance",
+                    "target": "pbd.length"
+                },
+                {
+                    "source": ".plane_matrix",
+                    "target": "pbd.plane_matrix"
+                },
+                {
+                    "source": ".start_frame",
+                    "target": "pbd.start_frame"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "pbd.position",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "pbd.velocity",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "pbd.initial_position",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "pbd.initial_velocity",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "pbd.start_frame",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "pbd.damping",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "pbd.elasticity",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "pbd.mass",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "pbd.stiffness",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "pbd.use_gravity",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "pbd.parent_position",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "pbd.length",
+                    "valueType": "float",
+                    "value": "0f"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}
