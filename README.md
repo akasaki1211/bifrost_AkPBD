@@ -37,6 +37,15 @@ BIFROST_LIB_CONFIG_FILES=D:\bifrost_AkPBD\bifrost_lib_config.json
 Some samples can be accessed from the Bifrost Browser.  
 ![samples.png](.images/samples.png)
 
+|Graph|Description|Compounds used|
+|---|---|---|
+|boneDynamics|Create the dynamics for one section of bone. One sphere collision and one capsule collision are included as samples.|`verlet` `keep_position` `update_velocity` `reset` `ground_collision` `sphere_collision` `capsule_collision` `distance_constraint` `distance`|
+|boneDynamicsAngleLimit|It is a type of bone dynamics. Angle limit have been added to the constraint iterates, and changes have been made to use rotation values for input and output from Maya.|`verlet` `keep_position` `update_velocity` `reset` `sphere_collision` `angle_limit` `rotate_vector_around_axis` `distance_constraint` `distance`|
+|hingeJoint|It is a type of bone dynamics. It is achieved by projecting the corrected position and external force vector onto a certain plane.|`verlet` `keep_position` `update_velocity` `reset` `project_onto_plane` `distance_constraint` `distance`|
+|meshCollision|Mesh collision deforms the mesh. The area around the contact point will bulge. *Only available for mesh.|`verlet` `keep_position` `update_velocity` `reset` `mesh_collision_with_bulge`|
+|rope|Create a rope with dynamics and distance constraints at 7 points. Points at both ends can be moved. Sphere and capsule collisions are included.|`verlet` `keep_position` `update_velocity` `reset` `ground_collision` `sphere_collision` `capsule_collision` `distance` `mass_to_weight` `distance_constraint` `distance_constraint_2_points` `normalize_weight`|
+|softMesh|Create dynamics to the vertices of a mesh. There is weighting by vertex color. One sphere collision is included as a sample.|`verlet` `keep_position` `update_velocity` `reset` `sphere_collision`|
+
 # Related Links  
 * [Bifrostではじめる位置ベース物理シミュ 第1回 \~位置ベース法\~](https://qiita.com/akasaki1211/items/54f6009ed3389948f7f0)
 * [Bifrostではじめる位置ベース物理シミュ 第2回 \~力を加える・位置を補正する\~](https://qiita.com/akasaki1211/items/d7272303d44d4823b39d)
